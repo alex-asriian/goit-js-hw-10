@@ -34,7 +34,7 @@ const options = {
   onClose(selectedDates) {
       console.log(selectedDates[0]);
       userSelectedDate = selectedDates[0];
-      if (userSelectedDate < new Date()) {
+      if (userSelectedDate <= new Date()) {
           iziToast.error(errorMsg)
           startButton.disabled = true;
       } else { startButton.disabled = false;
