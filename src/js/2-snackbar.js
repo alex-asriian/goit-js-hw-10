@@ -9,15 +9,15 @@ form.addEventListener('submit', (e) => {
     const state = e.currentTarget.elements.state.value;
 
     createPromise(delay, state)
-        .then((res) => {
+        .then(() => {
         iziToast.success({
-            message: `✅ Fulfilled promise in ${res}ms`,
+            message: `✅ Fulfilled promise in ${delay}ms`,
             position: 'topRight',
          })
         })
-        .catch((err) => {
+        .catch(() => {
             iziToast.error({
-                message: `❌ Rejected promise in ${err}ms`,
+                message: `❌ Rejected promise in ${delay}ms`,
                 position: 'topRight',
              })
         })
